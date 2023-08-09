@@ -1,4 +1,4 @@
-
+import Logo from "../../images/Logo.jpg"
 
 export const Dashboard = () => {
     return(
