@@ -1,0 +1,23 @@
+.label{
+    color: var(--grey-0);
+    font-family: var(--font-family);
+    font-size: 0.7614rem;
+    font-weight: 400;
+    line-height: 0px; 
+}
+
+.tipograph{
+    font-family: var(--font-family);
+    &.pLogin{
+        color: var(--grey-1);
+        font-size: 0.75rem;
+        font-weight: 600;
+        line-height: 18px; 
+    }
+    &.titleLogin{
+        color: var(--grey-0);
+        font-size: 1.125rem;
+        font-weight: 700;
+        line-height: 28px; 
+    }
+}

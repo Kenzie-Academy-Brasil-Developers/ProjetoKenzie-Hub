@@ -2,10 +2,10 @@ import { forwardRef } from "react"
 
 export const Input = forwardRef(({label, ...rest}, ref) => {
     return(
-        <div>
-            <label>
+        <div className="inputBox">
+            <label className="label">
                 {label}
-                <input ref={ref} {...rest} /> 
+                <input className="input" ref={ref} {...rest} /> 
             </label>
         </div>
     )

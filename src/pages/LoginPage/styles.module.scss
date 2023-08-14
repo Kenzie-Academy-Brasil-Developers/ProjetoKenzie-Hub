@@ -1,0 +1,14 @@
+.main{
+    max-width: 1440px;
+}
+
+.FormLogin{
+    width: 100%;
+    max-width: 334px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    background: var(--grey-3);
+    height: 417px;
+}
