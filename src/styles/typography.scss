@@ -20,4 +20,17 @@
         font-weight: 700;
         line-height: 28px; 
     }
+    &.titleDashboard{
+        color: var(--grey-0);
+        font-size: 1.125rem;
+        font-weight: 700;
+        line-height: 28px; 
+    }
+    &.textDashboard{
+        color: #FFF;
+        font-size: 1rem;
+        font-weight: 400;
+        line-height: 24.364px
+    }
+
 }

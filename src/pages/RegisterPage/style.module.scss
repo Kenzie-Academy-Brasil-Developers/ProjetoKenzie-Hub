@@ -1,0 +1,58 @@
+main{
+    max-width: 1440px;
+}
+.FormRegister{
+    width: 100%;
+    max-width: 334px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    background: var(--grey-3);
+    padding: 10px;
+    height: 100%;
+}
+
+.FormsRegisterContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    flex-direction: column;
+    gap: 20px;
+    padding: 30px;
+}
+
+.divContent{
+    width: 100%;
+    max-width: 334px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.buttonLink{
+    font-family: var(--font-family);
+    font-size: -0.125rem;
+    font-weight: 500;
+    height: 32px;
+    border-radius: 4px;
+    background-color: var(--grey-3);
+    width: 60px;
+    padding: 7px;
+    a{
+        color: var(--grey-0);
+    }
+    &:hover{
+        background-color: var(--grey-2);
+    }
+}
+
+.divTitle{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    margin-top: 35px;
+}

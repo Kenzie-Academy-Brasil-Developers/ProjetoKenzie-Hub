@@ -1,32 +1,50 @@
-.input{
-    width: 329.929px;
-    height: 48px;
-    padding: 0px 16.243px;
-    align-items: center;
-    gap: 10.152px;
-    flex-shrink: 0;
-}
+// .input{
+//     width: 100%;
+// }
 
 
+// .inputPassword{
+//     color: var(--grey-0);
+//     font-family: var(--font-family);
+//     font-size: 1.0152rem;
+//     font-weight: 400;
+//     border: 1px solid var(--grey-0);
+//     border-radius: 8px;
+//     background: var(--grey-2);
+//     display: flex;
+//     width: 100%;
+//     padding: 0px 16.243px;
+//     align-items: center;
+//     gap: 10.152px;
+//     height: 3rem;
+// }
 .inputPassword{
-    color: var(--grey-0);
-        font-family: var(--font-family);
-        font-size: 1.0152rem;
-        font-weight: 400;
-        line-height: 26.394px;
-        border: 1px solid var(--grey-0);
-        border-radius: 8px;
-        background: var(--grey-2);
         display: flex;
-        width: 100%;
-        max-width: 311px;
-        padding: 0px 16.243px;
-        align-items: center;
-        gap: 10.152px;
-        height: 48px;
+        flex-wrap: wrap;
+        justify-content: flex-end;
 }
 
-.inputReset{
-    border: 0;
+// .inputReset{
+//     appearance: none;
+//     -webkit-appearance: none;
+//     -moz-appearance: none;
+//     border: none;
+//     padding: 0;
+//     margin: 0;
+//     background: none;
+//     font-family: inherit;
+//     font-size: inherit;
+//     outline: none;
+// }
+
+.icon{
+    color: var(--grey-1);
+}
+.buttonHidden{
+    cursor: pointer;
     background: transparent;
+    border: none;
+    position: relative;
+    right: 13px;
+    bottom: 30px;
 }

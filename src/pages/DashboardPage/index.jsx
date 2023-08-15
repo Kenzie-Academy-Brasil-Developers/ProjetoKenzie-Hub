@@ -1,22 +1,24 @@
-import { Link } from "react-router-dom"
-import Logo from "../../images/Logo.svg"
+import Logo from "../../images/Logo.svg";
+import styles from "./style.module.scss";
 
 export const Dashboard = ({user, Logout}) => {
-
     return(
-        <main>
-            <header>
+        <main className={styles.main}>
+            <header className={styles.header}>
                 <img src={Logo} alt="Logo Kenzie Hub" />
-                <button onClick={Logout}> Sair</button>
+                <button className={styles.buttonLogout} onClick={Logout}> Sair</button>
             </header>
-            <section>
-                <div>
-                    <h2>Olá, {user.name}</h2>
-                    <p>{user.course_module}</p>
+            <section className={styles.sectionDashboard}>
+                <div className={styles.divBorder}>
+                    <div className={styles.divContentUser}>
+                    <h2 className="tipograph titleDashboard">Olá,{user.name}</h2>
+                    <p className={styles.p}>{user.course_module}</p>
                 </div>
-                <div>
-                    <h2>Que pena! Estamos em desenvolvimento :( </h2>
-                    <p>Nossa aplicação está em desenvolvimento, em breve teremos novidades</p>
+                </div>
+                
+                <div className={styles.divDash}>
+                    <h2 className="tipograph titleDashboard">Que pena! Estamos em desenvolvimento :( </h2>
+                    <p className="tipograph textDashboard">Nossa aplicação está em desenvolvimento, em breve teremos novidades</p>
                 </div>
             </section>
         </main>

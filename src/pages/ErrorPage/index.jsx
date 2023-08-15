@@ -1,9 +1,13 @@
+import LogoError from"../../images/error.svg";
+import styles from "./style.module.scss";
 
 export const ErrorPage = () => {
     return(
-        <main>
-            <h1>Error 404</h1>
-            <p>Não foi possivel encontrar a página!</p>
+        <main className={styles.mainn}>
+            <div className={styles.divError}>
+                <img className={styles.divImg} src={LogoError} alt="Error 404" />
+                <p className={styles.messagerror}>Não foi possivel encontrar a página!</p>
+            </div>
         </main>
     )
 }

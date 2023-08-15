@@ -5,4 +5,14 @@
     height: 100vh;
     flex-direction: column;
     gap: 20px;
+    padding: 20px;
+}
+
+.menssageError{
+    transition: opacity 0.3s, transform 0.3s;
+    color: var(--negative);
+    &:hover{
+        opacity: 1;
+        transform: translateY(2px);
+    }
 }

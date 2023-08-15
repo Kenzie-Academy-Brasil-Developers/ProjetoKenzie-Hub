@@ -16,7 +16,6 @@ export const RoutesMain = () => {
         navigation("/");
         localStorage.removeItem("@TOKEN");
     }
-    console.log(user)
 
     return(
         <Routes>

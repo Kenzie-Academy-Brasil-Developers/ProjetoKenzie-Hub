@@ -1,19 +1,27 @@
 .inputBox{
+    height: 81px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-start;
+    gap: 22px;
     input{
         color: var(--grey-0);
         font-family: var(--font-family);
         font-size: 1.0152rem;
         font-weight: 400;
-        line-height: 26.394px;
         border: 1px solid var(--grey-0);
         border-radius: 8px;
         background: var(--grey-2);
         display: flex;
         width: 100%;
-        max-width: 311px;
         padding: 0px 16.243px;
         align-items: center;
         gap: 10.152px;
-        height: 48px;
+        height: 3rem;
+        &:hover{
+            background: var(--grey-2);
+            border: 1px solid var(--grey-0);
+        }
     }
 }

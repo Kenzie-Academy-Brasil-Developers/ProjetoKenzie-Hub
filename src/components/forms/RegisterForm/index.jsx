@@ -6,6 +6,7 @@ import { FormSchemaRegister } from "./formsSchemaRegister";
 import { api } from "../../../services/api";
 import { toast } from 'react-toastify';
 import { useState } from "react";
+import styles from "./style.module.scss";
 
 export const RegisterPage = () => {
     const {register, handleSubmit, formState: {errors}} = useForm({
@@ -35,27 +36,30 @@ export const RegisterPage = () => {
     }
 
     return(
-            <form onSubmit={handleSubmit(Submit)}>
+            <form className={styles.formRegister} onSubmit={handleSubmit(Submit)}>
                 <Input label="Nome" type="text" placeholder="Digite aqui seu nome" {...register("name")} disabled={loading} />
-                {errors.name?.message}
+                <p className="menssageError">{errors.name?.message}</p>
                 <Input label="Email" type="email" placeholder="Digite aqui seu email" {...register("email")} disabled={loading} />
-                {errors.email?.message}
+                <p className="menssageError">{errors.email?.message}</p>
                 <Input label="Senha" type="password" placeholder="Digite aqui sua senha" {...register("password")} disabled={loading} />
-                {errors.password?.message}
+                <p className="menssageError">{errors.password?.message}</p>
                 <Input label="Confirmar Senha" type="password" placeholder="Digite novamente sua senha" {...register("confirmPassword")} disabled={loading} />
-                {errors.confirmPassword?.message}
+                <p className="menssageError">{errors.confirmPassword?.message}</p>
                 <Input label="Bio" type="text" placeholder="Fale sobre você" {...register("bio")} disabled={loading} />
-                {errors.bio?.message}
+                <p className="menssageError">{errors.bio?.message}</p>
                 <Input label="Contato" type="text" placeholder="Opção de contato" {...register("contact")} disabled={loading} />
-                {errors.contact?.message}
-                <select {...register("course_module")} disabled={loading} >
+                <p className="menssageError">{errors.contact?.message}</p>
+                
+                <label className="label" htmlFor="select">Selecionar módulo</label>
+                <select className={styles.select} {...register("course_module")} disabled={loading} >
+                    <option></option>
                     <option>Primeiro módulo (Introdução ao Frontend)</option>
                     <option>Segundo módulo (Frontend Avançado)</option>
                     <option>Terceiro módulo (Introdução ao Backend)</option>
                     <option>Quarto módulo (Backend Avançado)</option>
                 </select>
-                {errors.course_module?.message}
-                <button disabled={loading} >
+                <p className="menssageError">{errors.course_module?.message}</p>
+                <button className="buttons buttonLogin" disabled={loading} >
                     {loading ?  "Cadastrando..." : "Cadastrar"}
                 </button>
             </form>

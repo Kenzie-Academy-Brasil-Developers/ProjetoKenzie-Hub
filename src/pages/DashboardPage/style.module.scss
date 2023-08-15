@@ -1,0 +1,61 @@
+.main{
+    width: 100%;
+    max-width: 1440px;
+}
+
+
+.header{
+    margin: 0 auto;
+    max-width: 80%;
+    display: flex;
+    justify-content: space-between;
+    padding: 11px;
+    gap: 30px;
+}
+
+.buttonLogout{
+        color: var(--grey-0);
+        font-family: var(--font-family);
+        font-size: -0.125rem;
+        font-weight: 500;
+        height: 32px;
+        border-radius: 4px;
+        background-color: var(--grey-3);
+        width: 60px;
+        padding: 7px;
+}
+
+.sectionDashboard{
+    width: 80%;
+    margin: 0 auto;
+}
+
+.divContentUser{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 57px;
+    border-top: 1px solid var(--grey-3);
+    border-bottom: 1px solid var(--grey-3);
+    height: 118px;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+.p{
+    color: var(--grey-1);
+    font-family: var(--font-family);
+    font-size: 0.75rem;
+    font-weight: 400;
+    line-height: 22px;
+}
+
+.divDash{
+    width: 100%;
+    margin-top: 46px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 17px;
+}

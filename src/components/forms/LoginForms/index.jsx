@@ -7,7 +7,7 @@ import { FormSchema } from "./formSchema";
 import { useState } from "react";
 import { api } from "../../../services/api";
 import { toast } from 'react-toastify';
-import styles from "./style.module.scss"
+import styles from "./style.module.scss";
 
 export const LoginForm = ({setUser}) => {
     const Navigation = useNavigate();
@@ -43,12 +43,10 @@ export const LoginForm = ({setUser}) => {
 
         <form className={styles.formsLoginDate} onSubmit={handleSubmit(Submit)}>
             <Input label="Email" type="email" placeholder="E-mail" {...register("email")} disabled={loading} />
-            {errors.email?.message}
+            <p className="label menssageError">{errors.email?.message}</p>
             <InputPassword label="Senha" placeholder="Senha" {...register("password")} disabled={loading} />
-            {errors.password?.message}
+            <p className=" label menssageError">{errors.password?.message}</p>
             <button className="buttons buttonLogin" disabled={loading} >{loading ?  "Entrando..." : "Entrar"}</button>
-            <p className="tipograph pLogin">Ainda não possui uma conta? </p>
-            <button className="buttons buttonRegister"> <Link  to="/register">Cadastre-se</Link></button>
         </form>
     )
 }
