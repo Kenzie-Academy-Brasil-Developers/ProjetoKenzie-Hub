@@ -4,14 +4,14 @@
 
 .FormLogin{
     width: 100%;
-    max-width: 334px;
+    max-width: 350px;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: space-evenly;
     background: var(--grey-3);
-    height: 535px;
-    padding: 10px;
+    height: 502px;
+    padding: 11px;
+    align-content: center;
+    align-items: center;
 }
 .divButton{
     width: 100%;

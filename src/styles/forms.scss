@@ -1,16 +1,22 @@
 .Forms{
     display: flex;
     justify-content: center;
-    align-items: center;
     height: 100vh;
     flex-direction: column;
     gap: 20px;
     padding: 20px;
+    align-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
 }
 
 .menssageError{
     transition: opacity 0.3s, transform 0.3s;
-    color: var(--negative);
+    color: var(--grey-50, #868E96);
+    font-family: var(--font-family);
+    font-size: 0.6345rem;
+    font-weight: 400;
+    line-height: 0px; 
     &:hover{
         opacity: 1;
         transform: translateY(2px);
