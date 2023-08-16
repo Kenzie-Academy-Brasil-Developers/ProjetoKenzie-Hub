@@ -52,7 +52,6 @@ export const RegisterPage = () => {
                 
                 <label className="label" htmlFor="select">Selecionar módulo</label>
                 <select className={styles.select} {...register("course_module")} disabled={loading} >
-                    <option></option>
                     <option>Primeiro módulo (Introdução ao Frontend)</option>
                     <option>Segundo módulo (Frontend Avançado)</option>
                     <option>Terceiro módulo (Introdução ao Backend)</option>

@@ -45,7 +45,7 @@ export const LoginForm = ({setUser}) => {
             <Input label="Email" type="email" placeholder="E-mail" {...register("email")} disabled={loading} />
             <p className="label menssageError">{errors.email?.message}</p>
             <InputPassword label="Senha" placeholder="Senha" {...register("password")} disabled={loading} />
-            <p className=" label menssageError">{errors.password?.message}</p>
+            <p className="label menssageError">{errors.password?.message}</p>
             <button className="buttons buttonLogin" disabled={loading} >{loading ?  "Entrando..." : "Entrar"}</button>
         </form>
     )

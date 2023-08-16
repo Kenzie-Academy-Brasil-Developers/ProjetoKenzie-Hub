@@ -13,7 +13,9 @@ export const LoginPage = ({setUser}) => {
                     <LoginForm setUser={setUser} />
                     <p className="tipograph pLogin">Ainda não possui uma conta? </p>
                     <div className={styles.divButton}>
-                        <button className="buttons buttonRegister"> <Link to="/register">Cadastre-se</Link></button>
+                        <div className="buttons buttonRegister">
+                            <Link to="/register">Cadastre-se</Link>
+                        </div>
                     </div>
                 </div>
             </div>
