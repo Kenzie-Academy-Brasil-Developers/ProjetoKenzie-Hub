@@ -1,39 +1,25 @@
 import { useForm } from "react-hook-form";
 import { Input } from "../Input";
-import { useNavigate } from "react-router-dom";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { FormSchemaRegister } from "./formsSchemaRegister";
-import { api } from "../../../services/api";
-import { toast } from 'react-toastify';
-import { useState } from "react";
+import { useContext, useState } from "react";
 import styles from "./style.module.scss";
+import { UserContext } from "../../../providers/UserContext";
 
 export const RegisterPage = () => {
     const {register, handleSubmit, formState: {errors}} = useForm({
         resolver: zodResolver(FormSchemaRegister)
     })
-    const Navigation = useNavigate()
     
     const [loading, setLoading] = useState(false)
 
-    const useRegister = async (formData) => {
-        try {
-            setLoading(true)
-            await api.post("users", formData)
-            toast.success("Usuario cadastrado com sucesso")
-            Navigation("/")
-        } catch (error) {
-            if(error.response?.data.message === "Email already exists"){
-                toast.error("Usuario já cadastrado")
-            }
-        } finally{
-            setLoading(false)
-        }
-    }
+    
 
     const Submit = (formData) => {
-        useRegister(formData)
+        useRegister(formData, setLoading)
     }
+
+    const { useRegister } = useContext(UserContext)
 
     return(
             <form className={styles.formRegister} onSubmit={handleSubmit(Submit)}>
