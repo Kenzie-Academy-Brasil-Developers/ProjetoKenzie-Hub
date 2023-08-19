@@ -21,6 +21,5 @@ export const InputPassword = forwardRef(({label, ...rest}, ref) => {
             </div>
         </div>
         </>
-        
-    )
-})
+    );
+});

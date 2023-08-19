@@ -13,7 +13,7 @@ const  App = () => {
       {loading ? <Loading /> : <RoutesMain /> }
       <ToastContainer />
     </>
-  )
-}
+  );
+};
 
 export default App

@@ -20,5 +20,5 @@ export const RoutesMain = () => {
             </Route>
             <Route path="*" element={<ErrorPage />} />
         </Routes>
-    )
-}
+    );
+};

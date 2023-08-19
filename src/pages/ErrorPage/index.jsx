@@ -9,5 +9,5 @@ export const ErrorPage = () => {
                 <p className={styles.messagerror}>Não foi possivel encontrar a página!</p>
             </div>
         </main>
-    )
-}
+    );
+};

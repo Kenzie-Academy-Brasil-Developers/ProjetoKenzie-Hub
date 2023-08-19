@@ -8,5 +8,5 @@ export const Input = forwardRef(({label, ...rest}, ref) => {
             </label>
                 <input className="input" ref={ref} {...rest} /> 
         </div>
-    )
-})
+    );
+});

@@ -20,5 +20,5 @@ export const Register = () => {
                 </div>
             </div>
         </main>
-    )
-}
+    );
+};

@@ -6,4 +6,4 @@ export const PrivateRouts = () => {
     const { user} = useContext(UserContext);
 
     return user ? <Outlet /> : <Navigate to="/" />
-}
+};

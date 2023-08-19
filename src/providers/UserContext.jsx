@@ -16,7 +16,7 @@ export const UserProvider = ({children}) => {
     const pathname = window.location.pathname;
 
     useEffect(() => {
-        const token = localStorage.getItem("@TOKEN")
+        const token = localStorage.getItem("@TOKEN");
         const getUser = async () => {
             try {
                 setLoading(true)
@@ -24,13 +24,13 @@ export const UserProvider = ({children}) => {
                     headers: {
                         Authorization: `Bearer ${token}`
                     }
-                })
-                setUser(data)
-                navigation(pathname)
+                });
+                setUser(data);
+                navigation(pathname);
             } catch (error) {
-                toast.error("Ops! Algo deu errado!")
+                toast.error("Ops! Algo deu errado!");
             } finally {
-                setLoading(false)
+                setLoading(false);
             }
                 
             
@@ -38,7 +38,7 @@ export const UserProvider = ({children}) => {
         if(token){
             getUser();
         }
-    }, [])
+    }, []);
     
     const userLogin = async (formData, setLoading, reset) => {
         try {
@@ -51,27 +51,27 @@ export const UserProvider = ({children}) => {
             navigation("/dashboard");
         } catch (error) {
             if(error.response?.data.message === 'Incorrect email / password combination'){
-                toast.error("O Email e a senha não coincidem")
+                toast.error("O Email e a senha não coincidem");
             }
         } finally{
             setLoading(false);
         }
-    }
+    };
     
     const useRegister = async (formData, setLoading) => {
         try {
-            setLoading(true)
-            await api.post("users", formData)
-            toast.success("Usuario cadastrado com sucesso")
-            navigation("/")
+            setLoading(true);
+            await api.post("users", formData);
+            toast.success("Usuario cadastrado com sucesso");
+            navigation("/");
         } catch (error) {
             if(error.response?.data.message === "Email already exists"){
-                toast.error("Usuario já cadastrado")
+                toast.error("Usuario já cadastrado");
             }
         } finally{
-            setLoading(false)
+            setLoading(false);
         }
-    }
+    };
     
     const Logout = () => {
         setUser(null);
@@ -82,5 +82,5 @@ export const UserProvider = ({children}) => {
         <UserContext.Provider value={{loading,  user, useRegister, userLogin, Logout  }}>
             {children}
         </UserContext.Provider>
-    )
-}
+    );
+};

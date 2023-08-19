@@ -18,12 +18,11 @@ export const Dashboard = () => {
                     <p className={styles.p}>{user?.course_module}</p>
                 </div>
                 </div>
-                
                 <div className={styles.divDash}>
                     <h2 className="tipograph titleDashboard">Que pena! Estamos em desenvolvimento :( </h2>
                     <p className="tipograph textDashboard">Nossa aplicação está em desenvolvimento, em breve teremos novidades</p>
                 </div>
             </section>
         </main>
-    )
-}
+    );
+};

@@ -9,17 +9,17 @@ import { UserContext } from "../../../providers/UserContext";
 export const RegisterPage = () => {
     const {register, handleSubmit, formState: {errors}} = useForm({
         resolver: zodResolver(FormSchemaRegister)
-    })
+    });
     
-    const [loading, setLoading] = useState(false)
+    const [loading, setLoading] = useState(false);
 
     
 
     const Submit = (formData) => {
-        useRegister(formData, setLoading)
-    }
+        useRegister(formData, setLoading);
+    };
 
-    const { useRegister } = useContext(UserContext)
+    const { useRegister } = useContext(UserContext);
 
     return(
             <form className={styles.formRegister} onSubmit={handleSubmit(Submit)}>
@@ -48,5 +48,5 @@ export const RegisterPage = () => {
                     {loading ?  "Cadastrando..." : "Cadastrar"}
                 </button>
             </form>
-    )
-}
+    );
+};
