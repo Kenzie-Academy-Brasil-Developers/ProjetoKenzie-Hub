@@ -1,0 +1,19 @@
+.divContent{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.divUl{
+    width: 100%;
+    margin-top: 20px;
+    height: auto;
+    background-color: var(--grey-3);
+    padding: 20px;
+    ul{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+}

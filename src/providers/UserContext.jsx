@@ -1,11 +1,14 @@
-import { createContext, useEffect, useState } from "react";
+import { createContext, useContext, useEffect, useState } from "react";
 import { api } from "../services/api";
 import { toast } from "react-toastify";
 import { useNavigate } from "react-router-dom";
+import { TechContext } from "./TechContext";
 
 export const UserContext = createContext({});
 
 export const UserProvider = ({children}) => {
+
+    const { setTechList} = useContext(TechContext)
 
     const [user, setUser] = useState(null);
 
@@ -26,6 +29,7 @@ export const UserProvider = ({children}) => {
                     }
                 });
                 setUser(data);
+                setTechList(data.techs)
                 navigation(pathname);
             } catch (error) {
                 toast.error("Ops! Algo deu errado!");
@@ -46,6 +50,7 @@ export const UserProvider = ({children}) => {
             const { data } = await api.post("sessions", formData);
             toast.success("Login feito com sucesso");
             setUser(data.user);
+            setTechList(data.user.techs)
             localStorage.setItem("@TOKEN", data.token );
             reset();
             navigation("/dashboard");

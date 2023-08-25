@@ -14,7 +14,7 @@ export const Register = () => {
                 <div className={styles.FormRegister}>
                     <div className={styles.divTitle}>
                         <h2 className="tipograph titleLogin">Crie sua conta</h2>
-                        <p className="tipograph pLogin">Rapido e grátis, vamos nessa </p>
+                        <p className="tipograph pLogin">Rapido e grátis, vamos nessa!</p>
                     </div>
                     <RegisterPage />
                 </div>

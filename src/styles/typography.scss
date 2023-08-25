@@ -32,5 +32,25 @@
         font-weight: 400;
         line-height: 24.364px
     }
+    &.titleTech{
+        color: #FFF;
+        font-size: 0.8881rem;
+        font-weight: 700;
+        line-height: 22.334px; 
+    }
+    &.titleStatus{
+        color: var(--grey-1, #868E96);
+        font-size: 0.7614rem;
+        font-weight: 400;
+        line-height: 22.334px;
+    }
+    &.modaltitle{
+        color: var(--grey-0);
+        font-size: 0.875rem;
+        font-weight: 700;
+        line-height: 24px
+    }
 
 }
+
+
